@@ -28,6 +28,6 @@ function todaysDate() {
   return today;
 }
 
-console.log(todaysDate());
-
-$(document).ready(function () {});
+$(document).ready(function () {
+  $("#currentDay").text(todaysDate());
+});
