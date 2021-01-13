@@ -23,11 +23,11 @@
 // if save button has been pressed, data should be saved to local storage
 // function that takes data from local storage and outputs it to html whenever page is loaded
 
-// function todaysDate() {
-//   var today = moment().format("dddd, MMMM Do");
-//   return today;
-// }
+function todaysDate() {
+  var today = moment().format("dddd, MMMM Do");
+  return today;
+}
 
-// console.log(todaysDate());
+console.log(todaysDate());
 
-// $(document).ready(function () {});
+$(document).ready(function () {});
