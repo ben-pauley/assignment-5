@@ -16,16 +16,54 @@
 
 $(document).ready(function () {
   $("#currentDay").text(todaysDate());
-  $(".saveBtn").click(function () {
-    storeEventDetails();
+
+  loadEventContent();
+
+  $("#btn9").click(function () {
+    storeEventContent("#event9", "event9");
   });
+  $("#btn10").click(function () {
+    storeEventContent("#event10", "event10");
+  });
+  $("#btn11").click(function () {
+    storeEventContent("#event11", "event11");
+  });
+  $("#btn12").click(function () {
+    storeEventContent("#event12", "event12");
+  });
+  $("#btn13").click(function () {
+    storeEventContent("#event13", "event13");
+  });
+  $("#btn14").click(function () {
+    storeEventContent("#event14", "event14");
+  });
+  $("#btn15").click(function () {
+    storeEventContent("#event15", "event15");
+  });
+  $("#btn16").click(function () {
+    storeEventContent("#event16", "event16");
+  });
+  $("#btn17").click(function () {
+    storeEventContent("#event17", "event17");
+  });
+
+  function todaysDate() {
+    var today = moment().format("dddd, MMMM Do");
+    return today;
+  }
+
+  function storeEventContent(eventID, localStorageKey) {
+    var eventContent = $(eventID).text();
+    localStorage.setItem(localStorageKey, eventContent);
+  }
+
+  function loadEventContent() {
+    for (var i = 9; i <= 17; i++) {
+      var localStorageKey = "event" + i;
+      var eventID = "#event" + i;
+
+      var eventContent = localStorage.getItem(localStorageKey);
+      $(eventID).text(eventContent);
+    }
+  }
 });
-
-function todaysDate() {
-  var today = moment().format("dddd, MMMM Do");
-  return today;
-}
-
-function storeEventDetails() {
-  console.log("test");
-}
