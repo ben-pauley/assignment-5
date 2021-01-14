@@ -18,6 +18,7 @@ $(document).ready(function () {
   $("#currentDay").text(todaysDate());
 
   loadEventContent();
+  applyCSS();
 
   $("#btn9").click(function () {
     storeEventContent("#event9", "event9");
@@ -64,6 +65,21 @@ $(document).ready(function () {
 
       var eventContent = localStorage.getItem(localStorageKey);
       $(eventID).text(eventContent);
+    }
+  }
+
+  function applyCSS() {
+    var currentTime = moment().format("HH:mm:ss");
+    for (var i = 9; i <= 17; i++) {
+      var eventID = "#event" + i;
+      var eventValue = $(eventID).attr("value");
+      if (moment().hour(i).isSame(moment())) {
+        $(eventID).addClass("present");
+      } else if (moment().hour(i).isBefore(moment())) {
+        $(eventID).addClass("past");
+      } else if (moment().hour(i).isAfter(moment())) {
+        $(eventID).addClass("future");
+      }
     }
   }
 });
