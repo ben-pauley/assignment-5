@@ -14,7 +14,7 @@ This project was completed using Visual Studio Code and I tested the website usi
 
 ## Screenshot of Deployed Application
 
-![deployed application](/images/example.png?raw=true)
+![deployed application](/images/deployed_calendar_app.png?raw=true)
 
 ## Conclusion
 
