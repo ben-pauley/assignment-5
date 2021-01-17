@@ -21,19 +21,9 @@ textarea {
   text-align: center;
 }
 
-.description {
-  white-space: pre-wrap;
-}
-
-.time-block {
-  border-radius: 15px;
-  text-align: center;
-}
-
 .row {
   border-top: 1px solid white;
   height: 80px;
-  white-space: pre-wrap;
 }
 
 .hour {
@@ -42,6 +32,10 @@ textarea {
   color: #000000;
   padding: 10px;
   text-align: right;
+}
+
+.event-content {
+  padding: 10px;
 }
 
 .past {
